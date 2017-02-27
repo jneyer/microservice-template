@@ -1,15 +1,14 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.http.HttpStatus;
 
-import com.example.util.ResourceException;
+import com.giantrobotlabs.util.ErrorResponse;
 
-public class ResourceExceptionTest {
+public class ErrorResponseTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -18,7 +17,8 @@ public class ResourceExceptionTest {
 	@Test
 	public void testToString() throws Exception {
 
-		assertThat(new ResourceException("reason", HttpStatus.OK, "description statement").toString(), notNullValue());
+		assertThat(new ErrorResponse(null, null, null).toString(), notNullValue());
+
 	}
 
 }

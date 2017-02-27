@@ -1,4 +1,4 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -12,6 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+
+import com.giantrobotlabs.util.CollectionResponse;
 
 public class CollectionResponseTest {
 

@@ -1,4 +1,4 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -9,6 +9,8 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.powermock.modules.junit4.PowerMockRunner;
+
+import com.giantrobotlabs.util.TestUtils;
 
 @RunWith(PowerMockRunner.class)
 public class TestUtilsTest {

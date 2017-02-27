@@ -1,4 +1,4 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -9,9 +9,9 @@ import org.junit.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.util.ErrorResponse;
-import com.example.util.ResourceException;
-import com.example.util.ResourceExceptionHandler;
+import com.giantrobotlabs.util.ErrorResponse;
+import com.giantrobotlabs.util.ResourceException;
+import com.giantrobotlabs.util.ResourceExceptionHandler;
 
 public class ResourceExceptionHandlerTest {
 

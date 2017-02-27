@@ -1,4 +1,4 @@
-package com.example;
+package com.giantrobotlabs;
 
 import java.util.HashMap;
 

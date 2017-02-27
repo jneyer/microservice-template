@@ -1,4 +1,4 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

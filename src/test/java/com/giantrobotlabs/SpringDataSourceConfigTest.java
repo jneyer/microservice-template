@@ -1,4 +1,4 @@
-package com.example;
+package com.giantrobotlabs;
 
 
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
-import com.example.SpringDataSourceConfig;
+import com.giantrobotlabs.SpringDataSourceConfig;
 
 public class SpringDataSourceConfigTest {
 

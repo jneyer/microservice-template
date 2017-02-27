@@ -1,4 +1,4 @@
-package com.example.util;
+package com.giantrobotlabs.util;
 
 import java.io.Serializable;
 import java.util.Optional;

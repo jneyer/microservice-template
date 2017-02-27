@@ -1,4 +1,4 @@
-package com.example;
+package com.giantrobotlabs;
 
 import java.text.SimpleDateFormat;
 import java.util.Optional;
@@ -57,5 +57,4 @@ public class SpringConfig {
 		return new ApiInfoBuilder().title(env.getProperty("api.title")).description(env.getProperty("api.description"))
 				.version(env.getProperty("api.version")).build();
 	}
-
 }
