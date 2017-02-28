@@ -11,10 +11,16 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class ModelTemplateTest {
 
-	class TestModel extends ModelTemplate {
+	@SuppressWarnings("serial")
+	class TestModel extends ModelTemplate<TestModel> {
 
 		TestModel(Long id) {
 			this.modelId = id;
+		}
+
+		@Override
+		public TestModel update(TestModel model) {
+			return null;
 		}
 
 	}
@@ -22,7 +28,7 @@ public class ModelTemplateTest {
 	@Test
 	public void testModel() throws Exception {
 
-		ModelTemplate model = new TestModel(999L);
+		TestModel model = new TestModel(999L);
 
 		model.onCreate();
 		model.onUpdate();
@@ -36,7 +42,7 @@ public class ModelTemplateTest {
 	@Test
 	public void testAddLinks() throws Exception {
 
-		ModelTemplate model = new TestModel(999L);
+		TestModel model = new TestModel(999L);
 		model.addLinks(null);
 
 		// This test doesn't do anything yet

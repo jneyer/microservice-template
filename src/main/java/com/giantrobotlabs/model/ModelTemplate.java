@@ -1,5 +1,7 @@
 package com.giantrobotlabs.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,6 @@ import javax.persistence.PreUpdate;
 
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.ReadOnlyProperty;
-import org.springframework.hateoas.ResourceSupport;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -17,7 +18,9 @@ import com.giantrobotlabs.resource.ResourceTemplate;
 
 @Entity
 @JsonInclude(Include.NON_NULL)
-abstract public class ModelTemplate extends ResourceSupport {
+abstract public class ModelTemplate<T> implements Serializable {
+
+	private static final long serialVersionUID = -4072426133045167484L;
 
 	@Id
 	@GeneratedValue
@@ -43,10 +46,6 @@ abstract public class ModelTemplate extends ResourceSupport {
 		this.updated = new DateTime();
 	}
 
-	public Long getModelId() {
-		return this.modelId;
-	}
-
 	public DateTime getCreated() {
 		return created;
 	}
@@ -55,8 +54,26 @@ abstract public class ModelTemplate extends ResourceSupport {
 		return updated;
 	}
 
+	public Long getModelId() {
+		return this.modelId;
+	}
+
+	/**
+	 * Create resource links from the resource controller class
+	 * 
+	 * @param resource
+	 */
 	public void addLinks(Class<? extends ResourceTemplate<?>> resource) {
 
 	}
+
+	/**
+	 * Override this method to safely populate fields from one instance to
+	 * another.
+	 * 
+	 * @param model
+	 * @return
+	 */
+	abstract public T update(T model);
 
 }
