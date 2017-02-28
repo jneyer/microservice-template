@@ -1,4 +1,4 @@
-package com.giantrobotlabs;
+package com.giantrobotlabs.config;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
@@ -12,19 +12,19 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.env.Environment;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
-import com.giantrobotlabs.SpringConfig;
+import com.giantrobotlabs.config.DefaultSpringConfig;
 
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SpringConfigTest {
+public class DefaultSpringConfigTest {
 
 	@Mock
 	private Environment env;
 
 	@InjectMocks
-	private SpringConfig springConfig;
+	private DefaultSpringConfig springConfig;
 
 	@Before
 	public void setUp() throws Exception {

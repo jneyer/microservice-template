@@ -1,4 +1,4 @@
-package com.giantrobotlabs;
+package com.giantrobotlabs.config;
 
 import java.util.HashMap;
 
@@ -13,7 +13,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
-public class SpringDataSourceConfig {
+public class H2DataSourceConfig {
 
 	@Bean
 	public DataSource dataSource() {

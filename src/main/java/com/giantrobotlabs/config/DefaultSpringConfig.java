@@ -1,4 +1,4 @@
-package com.giantrobotlabs;
+package com.giantrobotlabs.config;
 
 import java.text.SimpleDateFormat;
 import java.util.Optional;
@@ -23,7 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SpringConfig {
+public class DefaultSpringConfig {
 
 	@Autowired
 	private Environment env;
@@ -53,7 +53,7 @@ public class SpringConfig {
 				.apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.boot"))).build();
 	}
 
-	ApiInfo getApiInfo() {
+	protected ApiInfo getApiInfo() {
 		return new ApiInfoBuilder().title(env.getProperty("api.title")).description(env.getProperty("api.description"))
 				.version(env.getProperty("api.version")).build();
 	}

@@ -1,4 +1,4 @@
-package com.giantrobotlabs;
+package com.giantrobotlabs.config;
 
 
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -10,15 +10,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
-import com.giantrobotlabs.SpringDataSourceConfig;
+import com.giantrobotlabs.config.H2DataSourceConfig;
 
-public class SpringDataSourceConfigTest {
+public class H2DataSourceConfigTest {
 
-	SpringDataSourceConfig config;
+	H2DataSourceConfig config;
 
 	@Before
 	public void setUp() throws Exception {
-		config = new SpringDataSourceConfig();
+		config = new H2DataSourceConfig();
 	}
 
 	@Test
