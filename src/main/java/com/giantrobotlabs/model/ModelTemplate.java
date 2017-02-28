@@ -12,12 +12,9 @@ import javax.persistence.PreUpdate;
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.ReadOnlyProperty;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.giantrobotlabs.resource.ResourceTemplate;
 
 @Entity
-@JsonInclude(Include.NON_NULL)
 abstract public class ModelTemplate<T> implements Serializable {
 
 	private static final long serialVersionUID = -4072426133045167484L;

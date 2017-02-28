@@ -35,10 +35,9 @@ public class DefaultSpringConfig {
 	@Bean
 	public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
 		ObjectMapper mapper = new ObjectMapper();
-		String prop = env.getProperty("api.date.format");
-		mapper.setDateFormat(new SimpleDateFormat(
-				Optional.ofNullable(env.getProperty("api.date.format")).orElse("yyyy-MM-dd'T'hh:mm:ssz")));
 		mapper.registerModule(new JodaModule());
+		mapper.setDateFormat(
+				new SimpleDateFormat(Optional.ofNullable(env.getProperty("api.date.format")).orElse("yyyy-MM-dd")));
 		mapper.setSerializationInclusion(Include.NON_NULL);
 		return new MappingJackson2HttpMessageConverter(mapper);
 	}
